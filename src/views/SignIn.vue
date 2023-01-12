@@ -8,19 +8,30 @@ const { userInfo } = store
 
 <template>
     <section id="signIn">
-        <div>
+        <div class="signInItem">
             <span>帳號</span>
-            <input type="text" v-model="userInfo.account">
+            <el-input v-model="userInfo.account" placeholder="Please input" />
         </div>
-        <div>
+        <div class="signInItem">
             <span>密碼</span>
-            <input type="text" v-model="userInfo.password">
+            <el-input v-model="userInfo.password" placeholder="Please input" />
         </div>
     </section>
 </template>
 
 <style lang="scss" scoped>
     #signIn {
-        background: #000;
+        .signInItem{
+            display: flex;
+            > span {
+                width: 10%;
+                max-width: 60px;
+                padding: 10px;
+                box-sizing: border-box;
+            }
+        }
+        .signInItem + .signInItem {
+            margin-top: 1rem;
+        }
     }
 </style>

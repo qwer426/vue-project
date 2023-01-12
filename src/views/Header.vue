@@ -34,9 +34,11 @@ const routerClick = function (name) {
 <style lang="scss" scoped>
 .navHeader {
     width: 100%;
-    border: 1px solid #123;
+    max-width: 1280px;
     .routerGroup {
         display: flex;
+        padding: 0;
+        margin: 0;
         li {
             list-style: none;
             padding: 5px;
