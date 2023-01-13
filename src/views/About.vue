@@ -2,7 +2,7 @@
 import { storeToRefs } from 'pinia'
 import { useCounterStore } from "@/stores/counter"
 const store = useCounterStore()
-const { count, doubleCount } = store
+const { count, doubleCount } = storeToRefs(store)
 // console.log('count', store.count)
 </script>
 <template>
